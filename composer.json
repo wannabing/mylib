@@ -1,0 +1,42 @@
+{
+    "name": "wannabing/mylib",
+    "description": "library for myself to develop",
+    "license": "MIT",
+    "type": "library",
+    "version": "v1.0.0",
+    "authors": [
+        {
+            "name": "wannabing",
+            "email": "hkw@hisums.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "laravel/framework": ">=5.5",
+        "doctrine/dbal": "2.*",
+        "intervention/image": "^2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wannabing\\Lib\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Wannabing\\Lib\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wannabing\\Lib\\LibServiceProvider"
+            ],
+            "aliases": {
+                "Wechat": "Wannabing\\Lib\\Facades\\Lib"
+            }
+        }
+    }
+}
